@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\EtudiantController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/etudiant_list', [EtudiantController::class, 'index'])->name('etudiant_list');
 require __DIR__.'/auth.php';
