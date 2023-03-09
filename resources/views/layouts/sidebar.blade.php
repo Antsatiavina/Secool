@@ -59,7 +59,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="modal-examples.html"><i data-feather="square"></i><span class="menu-title text-truncate" data-i18n="Modal Examples">Modal Examples</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route("etudiant_list") }}"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Modal Examples">Liste des étudiants</span></a>
                 </li>
                 <li class=" navigation-header"><span data-i18n="Forms &amp; Tables">Forms &amp; Tables</span><i data-feather="more-horizontal"></i>
                 </li>

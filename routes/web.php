@@ -28,5 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Etudiant crud 
 Route::get('/etudiant_list', [EtudiantController::class, 'index'])->name('etudiant_list');
+Route::post('/ajouter_etudiant', [EtudiantController::class, 'insert'])->name('ajouter_etudiant');
+Route::get('/supprimer/{id}', [EtudiantController::class, 'delete']);
+Route::post('/modifier/{id}', [EtudiantController::class, 'modify']);
 require __DIR__.'/auth.php';

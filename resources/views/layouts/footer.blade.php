@@ -25,7 +25,6 @@
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
 
-     <script src="{{ asset('app-assets/js/scripts/tables/table-datatables-basic.js') }}"></script>
     <!-- Datatable -->
 
     <!-- BEGIN: Page Vendor JS-->
@@ -39,6 +38,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
+     <script src="{{ asset('app-assets/js/scripts/tables/table-datatables-basic.js') }}"></script>
     <script src="{{ asset('app-assets/js/scripts/pages/dashboard-ecommerce.js') }}"></script>
     <!-- END: Page JS-->
 

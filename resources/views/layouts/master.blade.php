@@ -57,6 +57,7 @@
     <div class="drag-target"></div>
 
     @include("layouts.footer")
+    @yield("script")
 </body>
 <!-- END: Body-->
 

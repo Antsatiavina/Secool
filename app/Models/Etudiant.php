@@ -9,6 +9,12 @@ use App\Models\Classe;
 class Etudiant extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nom',
+        'prenom'
+    ];
+
     public function classe(){
         $this->hasOne(Classe::class);
     }
