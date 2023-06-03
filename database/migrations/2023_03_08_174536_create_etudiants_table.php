@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("nom");
             $table->string("prenom");
-            $table->foreignId("classe_id")->constrained("classes");
+            $table->foreignId("classe_id")->constrained();
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Scheme::table("etudiants", function(Blueprint $table){
+        Schema::table("etudiants", function(Blueprint $table){
             $table->dropConstrainedForeignId("class_id");
         });
         Schema::dropIfExists('etudiants');

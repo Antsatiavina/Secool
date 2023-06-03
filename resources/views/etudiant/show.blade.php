@@ -39,7 +39,7 @@
                                 <td>{{ $etu->id }}</td>
                                 <td>{{ $etu->nom }}</td>
                                 <td>{{ $etu->prenom }}</td>
-                                <td>{{ $etu->classe_id }}</td>
+                                <td>{{ $etu->classe->libelle}}</td>
                                 <td>
                                     <a href="/supprimer/{{ $etu->id }}" title="Supprimer"><i data-feather="trash" class="text-danger"></i></a>
                                     &nbsp

@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class EtudiantController extends Controller
 {
     public function index(){
-        $classes=Classe::All();
-        $etudiants=Etudiant::orderBy("nom","asc")->get();
+      $classes=Classe::All();
+        $etudiants=Etudiant::with('classe')->orderBy("nom","asc")->get();
         return view("etudiant.show",compact("etudiants","classes"));
     }
      public function insert(Request $request){

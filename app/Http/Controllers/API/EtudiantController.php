@@ -14,9 +14,10 @@ class EtudiantController extends Controller
      */
     public function index()
     {
-        $classes=Classe::All();
-        $etudiants=Etudiant::All();
-        return response()->json($etudiants);
+        $etudiants=Etudiant::with('classe')->get();
+        return response()->json([
+            "etudiants"=>$etudiants
+        ]);
     }
 
     /**

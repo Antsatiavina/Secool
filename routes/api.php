@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\EtudiantController;
+use App\Http\Controllers\API\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,13 @@ use App\Http\Controllers\API\EtudiantController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-route::apiResource("etudiant", EtudiantController::class);
+Route::apiResource("etudiant", EtudiantController::class);
+
+Route::post('login', [UserController::class, 'login']);
+Route::post('register',[UserController::class, 'register']);
+
+Route::middleware(['auth:api'])->group(function(){
+    Route::get('user',[UserController::class, 'index']);
+    Route::post('logout',[UserController::class, 'logout']);
+});
 ?>

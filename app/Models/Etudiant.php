@@ -16,6 +16,7 @@ class Etudiant extends Model
     ];
 
     public function classe(){
-        $this->hasOne(Classe::class);
+        return $this->hasOne(Classe::class,'id','classe_id')->select('id','libelle');
     }
 }
+?>
